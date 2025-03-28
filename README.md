@@ -85,4 +85,3 @@ Siga os passos abaixo para rodar o projeto localmente:
 - **Matéria**: Desenvolvimento Orientado a Serviços
 - **Professor**: Paulo Ricardo da Silva Pontes
 - **Instituição**: IFTO - Instituto Federal do Tocantins - Campus Araguaína
-```
