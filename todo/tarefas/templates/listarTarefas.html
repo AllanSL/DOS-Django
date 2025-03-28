@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Tarefas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="max-w-2xl w-full bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Minhas Tarefas</h2>
+        
+        {% if tarefas %}
+            <div class="grid gap-4">
+                {% for tarefa in tarefas %}
+                    <div class="bg-gray-50 border border-gray-300 rounded-lg p-4 shadow-md transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-blue-600">{{ tarefa.titulo }}</h3>
+                            <span class="text-sm text-gray-500">{{ tarefa.data|date:"d/m/Y" }}</span>
+                        </div>
+                        <p class="text-gray-700">{{ tarefa.descricao }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-center text-gray-500 italic">Nenhuma tarefa cadastrada ainda.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
