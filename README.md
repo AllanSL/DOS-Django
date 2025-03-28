@@ -80,24 +80,9 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 7. **Acesse a aplicação no navegador** em `http://127.0.0.1:8000/tarefas/listartarefas/`.
 
-## 🤝 Contribuições
-
-Este repositório está aberto para contribuições! Se você tiver sugestões de melhorias ou correções, sinta-se à vontade para abrir um **Pull Request**.
-
-## 📄 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
 ## 📚 Informações sobre a Disciplina
 
 - **Matéria**: Desenvolvimento Orientado a Serviços
 - **Professor**: Paulo Ricardo da Silva Pontes
 - **Instituição**: IFTO - Instituto Federal do Tocantins - Campus Araguaína
 ```
-
-### Detalhes:
-- **Badges**: Eu adicionei badges no topo (para mostrar o Django e Python). Eles ficam visíveis e são uma maneira atraente de exibir as tecnologias que você usou.
-- **Ícones e Emojis**: Usei emojis para dar um visual mais descontraído e atraente.
-- **Links e Formatação**: O conteúdo está bem estruturado com títulos e subtítulos claros.
-
-Agora, seu `README.md` está bem visual e atraente para quem for olhar o seu repositório no GitHub! 🚀
