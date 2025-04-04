@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-lg text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Bem-vindo ao Gerenciador</h1>
+        <p class="text-gray-600 mb-8">Escolha abaixo a opção desejada:</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Gerenciar Tarefas -->
+            <div class="bg-blue-500 text-white rounded-lg shadow-md p-6 hover:bg-blue-600 transition">
+                <h2 class="text-xl font-semibold mb-2">Gerenciar Tarefas</h2>
+                <p class="text-sm mb-4">Cadastre e visualize tarefas.</p>
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <a href="/tarefas/listartarefas" class="bg-white text-blue-600 px-4 py-2 rounded-md shadow hover:bg-gray-200 transition">
+                        Ver Tarefas
+                    </a>
+                    <a href="/tarefas/cadastrartarefas" class="bg-white text-blue-600 px-4 py-2 rounded-md shadow hover:bg-gray-200 transition">
+                        Nova Tarefa
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gerenciar Usuários -->
+            <div class="bg-green-500 text-white rounded-lg shadow-md p-6 hover:bg-green-600 transition">
+                <h2 class="text-xl font-semibold mb-2">Gerenciar Usuários</h2>
+                <p class="text-sm mb-4">Cadastre e visualize usuários.</p>
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <a href="/tarefas/listarusuarios" class="bg-white text-green-600 px-4 py-2 rounded-md shadow hover:bg-gray-200 transition">
+                        Ver Usuários
+                    </a>
+                    <a href="/tarefas/cadastrarusuarios" class="bg-white text-green-600 px-4 py-2 rounded-md shadow hover:bg-gray-200 transition">
+                        Novo Usuário
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

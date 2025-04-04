@@ -10,7 +10,7 @@ class Usuario(models.Model):
         return self.nome
     
 
-class Tarefas(models.Model):
+class Tarefa(models.Model):
     titulo = models.CharField(max_length=100, default='')
     descricao = models.CharField(max_length=200, default='')
     data = models.DateTimeField()
@@ -18,5 +18,3 @@ class Tarefas(models.Model):
 
     def __str__(self):
         return self.titulo
-
-
