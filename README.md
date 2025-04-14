@@ -61,7 +61,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 2. **Navegue até a pasta do projeto**:
 
    ```bash
-   cd POS/todo
+   cd todo
    ```
 
 3. **Ative o ambiente virtual**:

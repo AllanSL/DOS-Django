@@ -1,60 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas Tarefas</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+{% extends 'base.html' %}
 
-    <div class="max-w-2xl w-full bg-white p-6 rounded-lg shadow-lg">
-        
-        <!-- Botão para a Página Inicial -->
-        <div class="flex justify-between items-center mb-6">
-            <a href="/" 
-                class="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-green-700 transition">
-                Página Inicial
-            </a>
-            <h2 class="text-2xl font-bold text-gray-800">Minhas Tarefas</h2>
-            <a href="/tarefas/cadastrartarefas" 
-               class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-blue-700 transition">
-                + Nova Tarefa
-            </a>
-        </div>
-        
-        {% if tarefas %}
-            <div class="grid gap-4">
-                {% for tarefa in tarefas %}
-                    <div class="bg-gray-50 border border-gray-300 rounded-lg p-4 shadow-md transition-transform transform hover:-translate-y-1 hover:shadow-lg">
-                        <div class="mb-3">
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-lg font-semibold text-blue-600">{{ tarefa.titulo }}</h3>
-                                <span class="text-sm text-gray-500">{{ tarefa.data|date:"d/m/Y H:i" }}</span>
-                            </div>
-                            <p class="text-gray-700">{{ tarefa.descricao }}</p>
-                            <p class="text-blue-600">{{ tarefa.usuario }}</p>
-                        </div>
+{% block title %}Minhas Tarefas{% endblock %}
 
-                        <!-- Botões abaixo, alinhados -->
-                        <div class="flex justify-end gap-3 pt-2 border-t border-gray-300 mt-3">
-                            <a href="/tarefas/editartarefa/{{ tarefa.id }}" 
-                               class="px-3 py-1 bg-yellow-500 text-white text-sm font-medium rounded-lg shadow-md hover:bg-yellow-600 transition">
-                               ✏️ Editar
-                            </a>
-                            <a href="/tarefas/excluirtarefa/{{ tarefa.id }}" 
-                               class="px-3 py-1 bg-red-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-red-700 transition"
-                               onclick="return confirm('Tem certeza que deseja excluir esta tarefa?')">
-                               🗑️ Excluir
-                            </a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <p class="text-center text-gray-500 italic">Nenhuma tarefa cadastrada ainda.</p>
-        {% endif %}
+{% block content %}
+<div class="max-w-2xl w-full bg-white p-6 rounded-lg shadow-lg">
+    <div class="flex justify-between items-center mb-6">
+        <a href="{% url 'tarefas:cadastrartarefas' %}" 
+           class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-blue-700 transition">
+            + Cadastrar Tarefa
+        </a>
     </div>
 
-</body>
-</html>
+    {% if tarefas %}
+        <div class="grid gap-4">
+            {% for tarefa in tarefas %}
+                <div class="bg-gray-50 border border-gray-300 rounded-lg p-4 shadow-md transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+                    <div class="mb-3">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-blue-600">{{ tarefa.titulo }}</h3>
+                            <span class="text-sm text-gray-500">{{ tarefa.data|date:"d/m/Y H:i" }}</span>
+                        </div>
+                        <p class="text-gray-700">{{ tarefa.descricao }}</p>
+                        <p class="text-blue-600">{{ tarefa.usuario }}</p>
+                    </div>
+
+                    <!-- Botões abaixo, alinhados -->
+                    <div class="flex justify-end gap-3 pt-2 border-t border-gray-300 mt-3">
+                        <a href="/tarefas/editartarefa/{{ tarefa.id }}" 
+                           class="px-3 py-1 bg-yellow-500 text-white text-sm font-medium rounded-lg shadow-md hover:bg-yellow-600 transition">
+                           ✏️ Editar
+                        </a>
+                        <a href="/tarefas/excluirtarefa/{{ tarefa.id }}" 
+                           class="px-3 py-1 bg-red-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-red-700 transition"
+                           onclick="return confirm('Tem certeza que deseja excluir esta tarefa?')">
+                           🗑️ Excluir
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center text-gray-500 italic">Nenhuma tarefa cadastrada ainda.</p>
+    {% endif %}
+</div>
+{% endblock %}
