@@ -1,7 +1,5 @@
 # 📝 Lista de Tarefas - Projeto de Desenvolvimento Orientado a Serviços
 
-
-
 Este é um projeto desenvolvido no contexto da disciplina **Desenvolvimento Orientado a Serviços**, ministrada pelo professor **Paulo Ricardo da Silva Pontes** no **IFTO - Instituto Federal do Tocantins - Campus Araguaína**.
 
 ## 🚀 Descrição do Projeto
@@ -10,6 +8,8 @@ O objetivo deste projeto é desenvolver uma aplicação de lista de tarefas util
 
 ## ✅ Funcionalidades
 
+- **Login de Usuário**: Acesso restrito às funcionalidades apenas para usuários autenticados.
+- **Logout**: Permite que o usuário saia de sua sessão com segurança.
 - **Listagem de Tarefas**: Visualização de todas as tarefas cadastradas, incluindo título, descrição, data e usuário responsável.
 - **Cadastro de Tarefas**: Permite adicionar novas tarefas, especificando título, descrição, data e usuário.
 - **Edição de Tarefas**: Possibilita alterar informações das tarefas existentes.
@@ -112,7 +112,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 8. **Acesse a aplicação no navegador**:
 
-   - **Tela Inicial**: `http://127.0.0.1:8000/`
+   - **Tela Inicial (Login)**: `http://127.0.0.1:8000/`
 
 ## 📚 Informações sobre a Disciplina
 
