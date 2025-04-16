@@ -64,38 +64,53 @@ Siga os passos abaixo para rodar o projeto localmente:
    cd todo
    ```
 
-3. **Ative o ambiente virtual**:
+3. **Crie o ambiente virtual**:
+   ```bash
+   python -m venv venv
+   Ou 
+   python3 -m venv venv
+   ```
+
+4. **Ative o ambiente virtual**:
 
    ```bash
    source venv/bin/activate  # No Linux/macOS
    .\venv\Scripts\activate   # No Windows
    ```
 
-4. **Verifique se o Django está instalado**:
+5. **Verifique se o Django está instalado**:
 
    ```bash
    python -m django --version
+   ou
+   python3 -m django --version
    ```
 
    Se não estiver instalado, instale com:
 
    ```bash
    pip install django
+   ou
+   pip3 install django
    ```
 
-5. **Execute as migrações**:
+6. **Execute as migrações**:
 
    ```bash
    python manage.py migrate
+   ou
+   python3 manage.py migrate
    ```
 
-6. **Inicie o servidor**:
+7. **Inicie o servidor**:
 
    ```bash
    python manage.py runserver
+   ou
+   python3 manage.py runserver
    ```
 
-7. **Acesse a aplicação no navegador**:
+8. **Acesse a aplicação no navegador**:
 
    - **Tela Inicial**: `http://127.0.0.1:8000/`
 
